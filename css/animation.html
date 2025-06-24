@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{width: 100px;height: 100px;border: 1px solid;
+        animation-name: roll;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        /* animation-delay: 3s;         */
+        /* animation-direction: alternate; */
+        /* animation-fill-mode: backwards; */
+        animation-timing-function: linear;
+
+    }
+        .box:hover{
+            animation-play-state: paused;
+        }
+
+        @keyframes color {
+            from{
+                background-color: red;
+            }
+            to{
+                background-color: blue;
+            }
+        }
+        @keyframes roll {
+            0%{
+                margin-left: 0px;
+            }
+            50%{
+                margin-left: 100px;
+            }
+            100%{
+                margin-left: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
