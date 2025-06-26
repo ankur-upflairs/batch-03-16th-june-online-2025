@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dropdown{
+            position: relative;
+        }
+        .dropdown-items{            
+            width: 150px;
+            display: none;
+            position: absolute;
+            left: 100px;
+            button{
+                width: 100%;
+            }
+        }
+        .dropdown:hover .dropdown-items{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="dropdown">
+        <button class="dropdown-menu">drop down button</button>
+        <div class="dropdown-items">
+            <button>item 1</button><br>
+            <button>item 2</button><br>
+            <button>item 3</button><br>
+            <button>item 4</button>
+
+        </div>
+    </div>
+</body>
+</html>
