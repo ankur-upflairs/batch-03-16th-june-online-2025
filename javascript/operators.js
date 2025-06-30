@@ -35,7 +35,16 @@ a%=3 //a = a % 3
 // not ! => reverse the result 
 //falsy => 0 , '' (blank string) , false , undefined , null 
 
-console.log(!5)
+// console.log(!5)
+//unary operator
+// ++ (incremental) and -- (decremental)
+let n = 23
+//post increment
+console.log(n++) // p - 23 ,  24
+//pre increment
+console.log(++n) // p - 25 ,  25
+
+
 
 
 
