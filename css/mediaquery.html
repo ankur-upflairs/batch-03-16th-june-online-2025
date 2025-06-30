@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4 Boxes</title>
+  <style>
+    .mobile{
+        display: none;
+    }
+    .container{
+        width: 80%;margin: 10px auto;border: 1px solid;
+        display: flex;
+        /* justify-content: space-between;
+         */
+         gap: 10px;
+    }
+    .box {
+      width: 25%;
+      height: 100px;
+      border: 1px solid black;     
+    }
+    .box1{}
+    .box2{}
+    .box3{}
+    .box4{}
+    @media screen and (max-width:970px) {
+        .container{
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .box{
+            width: 47%;
+        }
+    }
+    @media screen and (max-width:767px) {
+         .container{
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+        .box{
+            width: 100%;
+        }
+        .desktop{display: none;}
+        .mobile{
+            display: block;
+        }
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+    </div>
+    <div class="desktop">desktop</div>
+    <div class="mobile">mobile</div>
+</body>
+</html>
