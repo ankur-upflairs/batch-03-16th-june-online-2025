@@ -60,4 +60,6 @@ Write a program that takes a character and checks if it is an alphabet, digit, o
 
 */
 
-
+// if(year % 400 == 0){}//yeap year
+// else if (year % 100 == 0){} // not leap year
+// else if (year % 4 == 0 ){} //leap year
