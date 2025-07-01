@@ -9,10 +9,34 @@
 //     i++
 // }
 
-for(let i = 10 ; i > 0 ; i-- ){
+// for(let i = 10 ; i > 0 ; i-- ){
+//     console.log(i)
+// }
+
+// 5! => 5*4*3*2*1 
+// let n = 5
+// let fact = 1
+// for(let i =1 ; i<=n ; i++){
+//     fact = fact * i
+// }
+// console.log(fact)
+
+// let i =100;
+// do{
+//     console.log(i)
+//     i--
+// }while(i >= 1)
+//break - exit loops
+//continue - go to next iteration 
+
+// for(let i =1 ; i<=30 ; i++){
+//     if(i%3==0) continue
+//     console.log(i)
+// }
+for(let i =1 ; i<=10; i++){
+    if(i%7==0) break
     console.log(i)
 }
-/*
 
 /*
 Print numbers from 1 to 10 using a for loop.
@@ -60,4 +84,16 @@ Print numbers from 1 to 30, but skip multiples of 3 using continue.
 
 Print numbers from 1 to 10, but stop when the number is 7 using break.
 */
+// Reverse a number using a loop (e.g., input: 123, output: 321).
+
+
+while(n > 0){
+    d = n % 10
+    n= parseInt(n/10)
+    r = d *10 +d 
+}
+
+
+
+
 
