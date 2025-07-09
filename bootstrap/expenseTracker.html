@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .plus{
+            color: green;
+        }
+        .minus{color: red;}
+    </style>
+  </head>
+  <body>
+    <div class="bal"></div>
+    <form id="form" onsubmit="show(event)" >
+       <label for="">Add exprense</label> <input id="expense" type="number"><br>
+       <button>save</button>
+    </form>
+    <ul>
+
+    </ul>
+    <script>
+        [
+            {amount:'',category:'' , date:''}
+        ]
+        let input= document.getElementById('expense')
+        let form = document.getElementById('form')
+        let ul = document.querySelector('ul')
+        let balance = document.querySelector('.bal')
+        let expense = [] 
+        // form.addEventListener('submit',show)
+        function show(e){
+            e.preventDefault()
+            let value = parseInt(input.value)
+            // console.log(input.value)
+            expense.push(value)
+            calculate()
+            showAllExpense()
+            input.value = ''
+            return false 
+        }
+        function calculate(){
+            let total = expense.reduce((p,c,i)=>p+c,0)
+            balance.innerHTML = total
+        }
+        function showAllExpense() {
+            ul.innerHTML = ''
+            expense.forEach(v=>{
+                let li = document.createElement('li')
+                if(v>=0){
+                    li.className = 'plus'                    
+                }
+                else{
+                    li.className ='minus'
+                }
+                li.innerText = v 
+                ul.append(li)
+            })
+        }
+    </script>
+  </body>
+</html>

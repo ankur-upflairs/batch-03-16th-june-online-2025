@@ -1,0 +1,13 @@
+git -v
+git config --global user.name "xyz"
+git config --global user.email "abc@gmai.com"
+-------
+git clone "https://github.com/ankur-upflairs/test9.git"
+
+//modified => 
+//staging =>
+//tracking 
+git add .
+git commit -m "new file added"
+git push
+
