@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
-
-function Blog({title,content , image}) {
+import './blog.css'
+ 
+function Blog({title,content , image , isVarified}) {
     
   return (
     <>
@@ -14,11 +15,21 @@ function Blog({title,content , image}) {
           <a href="#" className="btn btn-primary">
             Go somewhere
           </a>
+          <p style={{
+            backgroundColor: isVarified ? 'blue' : 'red'
+          }} >
+            {isVarified ? 'varified' :'not varified'}
+          </p>
+          {/* <p className={isVarified ? 'varified' : 'not-varified'} >
+            {isVarified ? 'varified' :'not varified'}
+          </p> */}
         </div>
       </div>
     </>
   );
 }
+//student data - {name, class , age} 
+// age > 18 => adult/minor, => styling conditionally 
 
 export default Blog;
 
