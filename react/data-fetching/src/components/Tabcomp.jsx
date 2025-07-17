@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import GetAllProducts from './GetAllProducts'
 import GetSingleProduct from './GetSingleProduct'
-let tabs =["Get All Product","Single Product"]
+import CreatePost from './CreatePost'
+let tabs =["Get All Product","Single Product","Create Post"]
 
 function Tabcomp() {
     const [selectedTab,setSelectedTab] = useState(0)
@@ -14,6 +15,8 @@ function Tabcomp() {
         </ul>
         {selectedTab ==0 && <GetAllProducts />}
         {selectedTab ==1 && <GetSingleProduct />}
+        {selectedTab ==2 && <CreatePost />}
+
 
     </div>
   )
