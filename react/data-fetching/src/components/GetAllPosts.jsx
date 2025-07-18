@@ -26,7 +26,7 @@ function GetAllPosts() {
   return (
     <div>
       {isEdit ? (
-        <UpdatePost id={id} setIsEdit={setIsEdit} />
+        <UpdatePost id={id} setIsEdit={setIsEdit} setChange={setChange} />
       ) : (
         <>
           {posts.map((post, index) => {
